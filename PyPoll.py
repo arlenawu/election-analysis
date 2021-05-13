@@ -27,7 +27,7 @@ with open(file_open_path) as election_data:
 
     # Read & print header row
     headers = next(file_reader)
-    print(headers)
+    #print(headers)
 
     # Get total number of votes (total_votes)
     for row in file_reader:
@@ -46,38 +46,46 @@ with open(file_open_path) as election_data:
         # Tally candidate votes
         candidate_votes[candidate_name] +=1
 
-# Determine vote totals & percentage of candidates
-for candidate_name in candidate_options:
-    votes = candidate_votes[candidate_name]
-    vote_percentage = (float(votes)/float(total_votes))*100
-
-    print(f"{candidate_name}: {vote_percentage}%, {votes}")
-
-    # Determine highest vote & winner
-    if (votes > winning_count) and (vote_percentage > winning_percentage):
-        winning_count = votes
-        winning_percentage = vote_percentage
-        winning_candidate = candidate_name
-
-# Summarize the winner
-winning_candidate_summary = (
-    f"-------------------------\n"
-    f"Winner: {winning_candidate}\n"
-    f"Winning Vote Count: {winning_count:,}\n"
-    f"Winning Percentage: {winning_percentage:.1f}%\n"
-    f"-------------------------\n")
-print(winning_candidate_summary)
-
-
-# save output to election_analysis.txt
+# Save output to election_analysis.txt
 with open(file_save_path, "w") as txt_file:
 
-    txt_file.write("Arapahoe\nDenver\nJefferson")
+    # Get total votes
+    election_results = (
+        f"\nElection Results\n"
+        f"-------------------------\n"
+        f"Total Votes: {total_votes}\n"
+        f"-------------------------\n"
+    )
 
-#Data to retrieve
-# 1. total # votes cast
-# 2. complete list of candidates
-# 3. % of votes for each candidate
-# 4. total # votes for each candidate
-# 5. winner of election
+    # Print total votes to terminal & .txt file
+    print(election_results, end="")
+    txt_file.write(election_results)
+
+    # Determine vote totals & percentage of candidates
+    for candidate_name in candidate_options:
+        votes = candidate_votes[candidate_name]
+        vote_percentage = (float(votes)/float(total_votes))*100
+
+        # Get results for each candidate & print
+        candidate_results = f"{candidate_name}: {vote_percentage}%, {votes}\n"
+        print(candidate_results)
+        txt_file.write(candidate_results)
+
+        # Determine highest vote & winner
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
+            winning_count = votes
+            winning_percentage = vote_percentage
+            winning_candidate = candidate_name
+
+    # Summarize the winner & print to terminal & .txt file
+    winning_candidate_summary = (
+        f"-------------------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning Vote Count: {winning_count:,}\n"
+        f"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"-------------------------\n")
+    print(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
+
+
 
