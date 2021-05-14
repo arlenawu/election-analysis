@@ -1,7 +1,4 @@
-# Import datetime
-import datetime as dt
-#now = dt.datetime.now()
-#print("The time is ", now)
+# Import dependencies
 import csv
 import os
 
