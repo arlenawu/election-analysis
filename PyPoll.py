@@ -1,4 +1,4 @@
-# Import dependencies foofffffffdddsd
+# Import dependencies
 import csv
 import os
 
