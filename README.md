@@ -1,14 +1,14 @@
 # election-analysis
 
 ## Overview of Election Audit
-The Colorado Board of Elections requested an audit for a local congressional election. This project calculates the results to determine the winner, and breaks down voter percentages by county and by candidate.
+The Colorado Board of Elections commissioned an audit for a local congressional election. This project takes the votes and calculates the results to determine the winner, and breaks down voter percentages by county and by candidate. Results are output into a .txt file.
 
 ## Resources
 - Data Source: election_results.csv
 - Software: Python 3.9.5, Visual Studio Code 1.56.2
 
 ## Election-Audit Results
-The analysis of the election shows that:
+The analysis of the election were output into the file [election_analysis.txt](Analysis/election_analysis.txt). The results are as follows:
 
 - Total votes cast: 369711
 
@@ -22,6 +22,8 @@ The analysis of the election shows that:
   - Arapahoe:
     - 24,801 votes in total
     - 6.71% of all votes
+  
+  - Largest County Turnout: Denver
 
 - Results for Each Candidate:
   - Casper Stockham:
@@ -41,5 +43,14 @@ The analysis of the election shows that:
 
 
 ## Election-Audit Summary
+This script can easily be used for other election audits, so long as the input file follows a particular format. It should be a .csv file type, and within the file, the header line should say, "Ballot ID, County, Candidate". The voter data that follows should be organized so that each new line contains the information for one vote that was cast with the information in the same order as the header: Ballot ID, County, Candidate. An example snippet is shown below.
 
+>Ballot ID, County, Candidate
+>
+>ID#1, County1, Candidate1
+>
+>ID#2, County2, Candidate2
+
+### Potential Improvements
+One very useful modification to the script that would improve its functionality would be to launch a file-selection window that would enable the user to choose which file (set of voter data) to use upon starting the program.
 
