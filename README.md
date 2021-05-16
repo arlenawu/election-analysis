@@ -1,28 +1,45 @@
 # election-analysis
 
-## Project Overview
-These are the results of an election audit requested by the Colorado Board of Elections for a local congressional election.
+## Overview of Election Audit
+The Colorado Board of Elections requested an audit for a local congressional election. This project calculates the results to determine the winner, and breaks down voter percentages by county and by candidate.
 
 ## Resources
 - Data Source: election_results.csv
 - Software: Python 3.9.5, Visual Studio Code 1.56.2
 
-## Summary
+## Election-Audit Results
 The analysis of the election shows that:
 
 - Total votes cast: 369711
-- Candidates:
-  - Casper Stockham: 23.05%, 85213
-  - Diana DeGette: 73.81%, 272892
-  - Raymon Anthony Doane: 3.14%, 11606
+
+- Votes by County:
+  - Jefferson:
+    - 38,855 votes in total
+    - 10.51% of all votes
+  - Denver:
+    - 306,055 votes in total
+    - 82.78% of all votes
+  - Arapahoe:
+    - 24,801 votes in total
+    - 6.71% of all votes
+
 - Results for Each Candidate:
-  - Casper Stockham: received 23.05% of the votes and 85213 votes in total
-  - Diana DeGette: received 73.81% of the votes and 272892 votes in total
-  - Raymon Anthony Doane: received 3.14% of the votes and 11606 votes in total
-- Winner of the Election:
-  - Diana DeGette, who received 73.81% of the votes and 272892 votes in total
+  - Casper Stockham:
+    - 85,213 votes in total
+    - 23.05% of all votes
+  - Diana DeGette:
+    - 272,892 votes in total
+    - 73.81% of all votes
+  - Raymon Anthony Doane:
+    - 11,606 votes in total
+    - 3.14% of all votes
 
-## Challenge Overview
+- **Winner of the Election:**
+  - Winner: Diana DeGette
+  - Winning Vote Count: 272,892 votes
+  - Winning Percentage: 73.81%
 
 
-## Challenge Summary
+## Election-Audit Summary
+
+
