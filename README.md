@@ -43,7 +43,7 @@ The analysis of the election were output into the file [election_analysis.txt](A
 
 
 ## Election-Audit Summary
-This script can easily be used for other election audits, so long as the input file follows a particular format. It should be a .csv file type, and within the file, the header line should say, "Ballot ID, County, Candidate". The voter data that follows should be organized so that each new line contains the information for one vote that was cast with the information in the same order as the header: Ballot ID, County, Candidate. An example snippet is shown below.
+This script can easily be used for other election audits, so long as the input file follows a particular format. It should be a .csv file type, with the name "election_results.csv", and placed in a folder named "Resources" . Within the file, the header line should say, "Ballot ID, County, Candidate". The voter data that follows should be organized so that each new line contains the information for one vote that was cast with the information in the same order as the header: Ballot ID, County, Candidate. An example snippet is shown below.
 
 >Ballot ID, County, Candidate
 >
@@ -52,5 +52,5 @@ This script can easily be used for other election audits, so long as the input f
 >ID#2, County2, Candidate2
 
 ### Potential Improvements
-One very useful modification to the script that would improve its functionality would be to launch a file-selection window that would enable the user to choose which file (set of voter data) to use upon starting the program.
+One very useful modification to the script that would improve its functionality would be to launch a file-selection window that would enable the user to choose which file (set of voter data) to use upon starting the program. Then the user would not need to follow a specific naming format or file path. Another improvement could be to allow the voter data columns within the election results file to be ordered in any way, so long as the headers line up correctly with the voter data. This way, if the data collection method outputs the results in a different order, the program can still work.
 
